@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="CSS/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/r.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html"><img src="images/Fitwell-removebg-preview.png" alt="FitWell" width="100px" ></a></div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="workouts.html">Workouts</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="profile">
+            <a href="#"><i class="user-icon"><img src="images/icons8-user-30.png" alt="USER"></i></a>
+            <div class="dropdown">
+              <a href="logintest.html">Login</a>
+              <a href="signup.html">Sign Up</a>
+              <a href="">Logout</a>
+            </div>
+          </li>
+        </ul>
+        <!-- hamburger icon -->
+    <a href="#" class="nav-toggle " id="nav-toggle">
+      <img src="images/icons8-hamburger-25.png" alt="">
+    </a>
+      </nav>
+    <div class="container" >
+        <div class="image-section">
+            <img src="images/pexels-element5-1550337.jpg" alt="About Us Image" >
+        </div>
+        <div class="text-section">
+            <h1>About Us</h1>
+            <p>Welcome to FitWell, where your health and well-being are our top priorities. Our mission is to empower you with the knowledge, tools, and support needed to live a balanced and vibrant life. Whether you're seeking guidance on nutrition, fitness, mental health, or holistic wellness, our team of experts is dedicated to providing you with reliable, evidence-based information and personalized resources. Join us on a journey towards a healthier, happier you!</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+          <div class="footer-logo"><img src="images/Fitwell-removebg-preview.png" alt="FitWell" width="150px"></div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="#">Membership</a></li>
+            <li><a href="workouts.html">Workouts</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="social-media">
+            <a href="#"><img src="images/fb50.png" alt="Facebook" /></a>
+            <a href="#"><img src="images/ig50.png" alt="Instagram" /></a>
+            <a href="#"><img src="images/yt50.png" alt="YouTube" /></a>
+          </div>
+          <div class="newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <input type="email" placeholder="Email" />
+            <button >Submit</button>
+          </div>
+        </div>
+      </footer>
+      <script>
+        const togglebutton= document.getElementById('nav-toggle');
+        const navlinks= document.getElementById('nav-links');
+        togglebutton.addEventListener('click',()=>{
+          navlinks.classList.toggle('active');
+        })
+      </script>
+  
+</body>
+</html>

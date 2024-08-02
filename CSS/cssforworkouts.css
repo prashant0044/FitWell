@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Quicksand, sans-serif;
+    color: #fff;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.root {
+    background: url('images/workoutsbg.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#overlay-container {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+header {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px 40px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav-links a:hover {
+    color: #f0a500;
+}
+
+.profile {
+    position: relative;
+}
+
+.profile .dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.profile:hover .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background: #ff6f00;
+    color: white;
+}
+
+.nav-links .profile:hover .dropdown {
+    display: block;
+}
+
+.nav-links .dropdown a {
+    display: block;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links .dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+.header-content {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header-content h1 {
+    font-size: 45px;
+    text-align: left;
+    padding-left: 55px;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out, slideInLeft 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.challenges {
+    text-align: left;
+    padding: 55px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.challenges h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    animation: bounceIn 1.5s ease-in-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.challenge-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 280px;
+    background: transparent;
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    z-index: 2;
+    position: relative;
+}
+
+.card-content {
+    padding: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.card-content h3,
+.card-content p,
+.card-content button {
+    position: relative;
+    margin-bottom: 3px;
+    z-index: 2;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #ff6f00;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card-content button:hover {
+    background-color: #cc5700;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 50px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+.newsletter {
+    display: flex;
+    width: 100%;
+    max-width: 500px; /* Adjust max-width as needed */
+    margin-top: 0px;
+}
+
+.newsletter input,
+.newsletter button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    margin-right: 10px;
+}
+
+.newsletter input {
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.newsletter button {
+    margin-right: 0;
+    background: #ff6f00;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.newsletter button:hover {
+    background-color: #cc5700;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .header-content h1 {
+        font-size: 36px;
+        padding-left: 20px;
+        margin-top: 100px;
+    }
+
+    .challenges {
+        padding: 40px;
+    }
+
+    .challenges h2 {
+        font-size: 24px;
+    }
+
+    .challenge-cards {
+        justify-content: center;
+    }
+
+    .card {
+        width: calc(50% - 20px);
+        max-width: 300px;
+    }
+
+    .footer-content {
+        align-items: flex-start;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .newsletter {
+        max-width: 400px; /* Adjust max-width as needed */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+    .header-content h1 {
+        font-size: 30px;
+        padding-left: 20px;
+        margin-top: 80px;
+    }
+
+    .challenges {
+        padding: 20px;
+    }
+
+    .challenges h2 {
+        font-size: 22px;
+    }
+
+    .challenge-cards {
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .newsletter {
+        max-width: 300px; /* Adjust max-width as needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 5px 2px;
+    }
+
+    .header-content h1 {
+        font-size: 24px;
+        padding-left: 20px;
+        margin-top: 60px;
+    }
+
+    .challenges {
+        padding: 10px;
+    }
+
+    .challenges h2 {
+        font-size: 20px;
+    }
+
+    .challenge-cards {
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .newsletter {
+        max-width: 100%; /* Full width on small screens */
+    }
+}

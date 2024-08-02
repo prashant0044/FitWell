@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitWell</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/home.css" />
+  <link rel="stylesheet" href="CSS/r.css">
+</head>
+
+<body>
+  <div class="container">
+  <nav class="navbar">
+    <div class="logo"><a href="index.html"><img src="images/Fitwell-removebg-preview.png" alt="FitWell"
+          width="100px"></a></div>
+    <ul class="nav-links " id="nav-links"> 
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blogs.html">Blog</a></li>
+      <li><a href="#">Membership</a></li>
+      <li><a href="workouts.html">Workouts</a></li>
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="profile">
+        <a href="#"><i class="user-icon"><img src="images/icons8-user-25.png" alt="USER"></i></a>
+        <div class="dropdown">
+          <a href="logintest.html">Login</a>
+          <a href="signup.html">Sign Up</a>
+          <a href="#">Logout</a>
+        </div>
+
+      </li>
+
+    </ul>
+    <!-- hamburger icon -->
+    <a href="#" class="nav-toggle " id="nav-toggle">
+      <img src="images/icons8-hamburger-25.png" alt="">
+    </a>
+  </nav>
+
+  <header class="hero-section">
+    <img id="bg" src="images/deadlift.jpg" alt="fuck u" />
+    <div class="overlay">
+      <h1>Commit to be FIT</h1>
+      <p>
+        Your health is your wealth, and FitWell is here to help you invest
+        wisely. Explore our comprehensive resources and expert advice on
+        nutrition, fitness, and mental health. Together, we'll unlock your
+        full potential and create a life of balance and harmony.
+      </p>
+      <a href="signup.html">
+        <button class="cta-button">Get Started</button></a>
+    </div>
+  </header>
+
+  <section class="partners">
+    <img src="images/muscletech-logo.png" alt="Partner 1" />
+    <img src="images/isopure.jpg" alt="Partner 2" />
+    <img src="images/images.png" alt="Partner 3" />
+    <img src="images/pintola-removebg-preview.png" alt="Partner 4" />
+    <img src="images/on.png" alt="Partner 5" />
+  </section>
+
+  <section class="approach-section">
+    <h2>Our Approach</h2>
+    <p>Transforming Lives Every Day</p>
+    <div class="approach-content">
+      <article class="approach-item">
+        <h3>Nutritious Mornings</h3>
+        <p>
+          Kickstart your day with our carefully curated breakfast options that
+          fuel your body and mind for the day ahead.
+        </p>
+      </article>
+      <article class="approach-item">
+        <h3>Energizing Afternoons</h3>
+        <p>
+          Recharge in the middle of the day with our nutrient-packed lunch
+          selections that keep you energized and focused.
+        </p>
+      </article>
+      <article class="approach-item">
+        <h3>Balanced Evenings</h3>
+        <p>
+          Wind down with our wholesome dinner choices, designed to nourish and
+          revitalize your body after a long day.
+        </p>
+      </article>
+      <article class="approach-item">
+        <h3>Healthy Snacks</h3>
+        <p>
+          Satisfy your cravings guilt-free with our selection of nutritious
+          snacks that keep you feeling full and satisfied.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="consult-section">
+    <div class="consult-content">
+      <h2>Consult with Our Experts</h2>
+      <p>Start Your Transformation Journey Today</p>
+      <button class="cta-button" id="cta-button">Consult Now</button>
+    </div>
+    <div class="consult-image">
+      <img src="images/gd.jpg" alt="Consult with Experts" />
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo"><img src="images/Fitwell-removebg-preview.png" alt="FitWell" width="150px"></div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="#">Membership</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="social-media">
+        <a href="#"><img src="images/fb50.png" alt="Facebook" /></a>
+        <a href="#"><img src="images/ig50.png" alt="Instagram" /></a>
+        <a href="#"><img src="images/yt50.png" alt="YouTube" /></a>
+      </div>
+      <div class="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <input type="email" placeholder="Email" />
+        <button class="Submit-email">Submit</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.user-icon').addEventListener('click', function (e) {
+      e.preventDefault();
+      const dropdown = document.querySelector('.profile .dropdown');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    window.addEventListener('click', function (e) {
+      const dropdown = document.querySelector('.profile .dropdown');
+      if (!e.target.closest('.profile')) {
+        dropdown.style.display = 'none';
+      }
+
+    });
+    document.getElementById('cta-button').addEventListener('click', function () {
+      window.location.href = 'logintest.html'; // Change this to the actual login page URL
+    });
+
+  </script>
+  <script>
+    const togglebutton= document.getElementById('nav-toggle');
+    const navlinks= document.getElementById('nav-links');
+    togglebutton.addEventListener('click',()=>{
+      navlinks.classList.toggle('active');
+    })
+  </script>
+
+</div>
+</body>
+
+</html>

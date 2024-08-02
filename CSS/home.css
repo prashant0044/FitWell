@@ -1,0 +1,557 @@
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  background-color: #f0f0f0;
+  
+}
+.container{
+  overflow: hidden;
+}
+.logo{
+  padding-top: 5px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #000;
+  color: #fff;
+  animation: slideIn 1s ease-out; /* Slide in effect for navbar */
+}
+.nav-links a:hover {
+  color: #f0a500;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  animation: rotateIn 1s ease-out; /* Rotate in effect for logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+/* hamburger toggle */
+.nav-toggle{
+  display: none;
+  color: white;
+ 
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  /* animation: bounce 2s infinite; Bounce effect for nav links */
+}
+
+.nav-links .profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+
+.nav-links .profile .user-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links .profile .dropdown {
+  display: none;
+  position: absolute;
+  top: 60px; /* Adjust to align with the user icon */
+  right: 0;
+  background: #dfdfdf;
+  color: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  text-align: center;
+  z-index: 1000; /* Ensure the dropdown is above other elements */
+}
+
+.nav-links .profile:hover .dropdown {
+  display: block;
+  color: #f0a500;
+}
+
+.nav-links .dropdown a {
+  display: block;
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links .dropdown a:hover {
+  background-color: #f0f0f0;
+}
+
+.hero-section {
+  position: relative;
+  height: 80vh;
+  background: url("victor-freitas-WvDYdXDzkhs-unsplash\ \(1\).jpg") no-repeat center center/cover;
+}
+
+#bg {
+  width: 100%;
+  max-height: 990px;
+  
+  /* background-size: cover; */
+}
+
+.overlay {
+  position: absolute;
+  top: 100%;
+  right: 10%; /* Changed from left to right */
+  transform: translateY(
+    -50%
+  ); /* Removed translateX for centering horizontally */
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left; /* Align text to the left */
+}
+
+.overlay h1 {
+  font-size: 70px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  animation: fadeInDown 1s ease-out;
+}
+
+.overlay p {
+  font-size: 25px;
+  line-height: 1.5;
+  animation: fadeInUp 1s ease-out;
+}
+
+.cta-button {
+  padding: 20px 40px;
+  background-color: #8db4bb00;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  animation: fadeIn 2s ease-out;
+  font-size: 23px;
+  font-family: Quicksand, sans-serif;
+}
+
+.partners {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  background: #030303;
+  margin-top: 420px; /* Added margin-top to shift the section down */
+}
+
+.partners img {
+  max-width: 100px;
+
+  animation: fadeIn 1s ease-out;
+}
+
+.approach-section {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.approach-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.approach-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.approach-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.approach-item {
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  animation: fadeIn 1s ease-out;
+}
+
+.consult-section {
+  display: flex;
+  font-size: 100px;
+  justify-content: space-between;
+  padding: 50px 50px 50px 50px;
+  background: #000000;
+  color: #fff;
+}
+
+.consult-content {
+  max-width: 50%;
+}
+
+.consult-content h2 {
+  font-size: 70px;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.consult-content p {
+  font-size: 30px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.consult-image {
+  max-width: 50%;
+  animation: fadeIn 1s ease-out;
+}
+.cta-button{
+  border: 2px solid;
+  border-radius: 100px;
+}
+
+.consult-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+}
+
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  animation: bounce 1s; /* Bounce effect for footer links */
+}
+
+.social-media a {
+  margin-right: 10px;
+}
+
+.newsletter h3 {
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.newsletter input {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  margin-right: 10px;
+  animation: fadeInUp 1s ease-out;
+}
+.newsletter button{
+ border: 2px solid; 
+
+ background-color: rgba(0, 0, 0, 0);
+ border-radius: 8px;
+ color: #ffffff;
+ font-family: Quicksand, sans-serif;
+ font-size: 16px;
+ padding: 7px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }}
+
+
+  /* responsiveness */
+  /* For small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-section {
+    height: 60vh;
+  }
+
+  .overlay h1 {
+    font-size: 40px;
+  }
+
+  .overlay p {
+    font-size: 18px;
+  }
+
+  .cta-button {
+    padding: 15px 30px;
+    font-size: 20px;
+  }
+
+  .partners {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 200px;
+  }
+
+  .approach-content {
+    grid-template-columns: 1fr;
+  }
+
+  .consult-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .consult-content,
+  .consult-image {
+    max-width: 100%;
+  }
+
+  .consult-content h2 {
+    font-size: 40px;
+  }
+
+  .consult-content p {
+    font-size: 20px;
+  }
+}
+
+/* For tablets (portrait and landscape, 600px - 900px) */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .hero-section {
+    height: 70vh;
+  }
+
+  .overlay h1 {
+    font-size: 50px;
+  }
+
+  .overlay p {
+    font-size: 20px;
+  }
+
+  .cta-button {
+    padding: 18px 36px;
+    font-size: 22px;
+  }
+
+  .partners {
+    flex-direction: wrap;
+    gap: 20px;
+  }
+
+  .approach-content {
+    grid-template-columns: 1fr;
+  }
+
+  .consult-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .consult-content,
+  .consult-image {
+    max-width: 100%;
+  }
+
+  .consult-content h2 {
+    font-size: 50px;
+  }
+
+  .consult-content p {
+    font-size: 25px;
+  }
+}
+
+/* For small laptops (900px - 1200px) */
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+
+  .hero-section {
+    height: 75vh;
+  }
+
+  .overlay h1 {
+    font-size: 60px;
+  }
+
+  .overlay p {
+    font-size: 22px;
+  }
+
+  .cta-button {
+    padding: 20px 40px;
+    font-size: 23px;
+  }
+
+  .partners {
+    gap: 15px;
+  }
+
+  .consult-content h2 {
+    font-size: 60px;
+  }
+
+  .consult-content p {
+    font-size: 28px;
+  }
+}
+
+/* For large laptops and desktops (1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+
+  .hero-section {
+    height: 80vh;
+  }
+
+  .overlay h1 {
+    font-size: 70px;
+  }
+
+  .overlay p {
+    font-size: 25px;
+  }
+
+  .cta-button {
+    padding: 20px 40px;
+    font-size: 23px;
+  }
+
+  .partners {
+    gap: 20px;
+  }
+
+  .consult-content h2 {
+    font-size: 70px;
+  }
+
+  .consult-content p {
+    font-size: 30px;
+  }
+}

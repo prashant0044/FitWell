@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>FitWell</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/signup.css">
+    <!-- <link rel="stylesheet" href="footer.css"> -->
+</head>
+<body>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html"><img src="images/Fitwell-removebg-preview.png" alt="FitWell" width="100px"></a></div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="workouts.html">Workouts</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="profile">
+            <a href="#"><i class="user-icon"><img src="images/icons8-user-25.png" alt="USER"></i></a>
+          <div class="dropdown">
+            <a href="logintest.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="#">Logout</a>
+          </div>
+          </li>
+        </ul>
+      </nav>
+    <div class="signup-container">
+        <form class="signup-form">
+            <h2>Sign Up</h2>
+            <div class="form-group">
+                <!-- <label for="fullname">Full Name</label> -->
+                <!-- <input type="text" id="fullname" name="fullname" required> -->
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">New Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="number" id="mobile" name="mobile" required>
+            </div>
+            <div class="form-group">
+                <!-- <label for="age">Age</label> -->
+                <!-- <input type="number" id="age" name="age" required> -->
+            </div>
+            <div class="form-group">
+                <!-- <label for="gender">Gender</label> -->
+                
+            </div>
+            <button type="submit" class="signup-button">Sign Up</button>
+           
+        </form>
+        <script src="JS/signup_script.js"></script>
+        
+    </div>
+    <img src="images/pexels-leonardho-1552252.jpg" alt="" class="background">
+   
+      <footer>
+        <div class="footer-content">
+            <div class="footer-logo"><img src="images/Fitwell-removebg-preview.png" alt="FitWell" width="150px"></div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li><a href="#">Membership</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="contact.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="#"><img src="images/fb50.png" alt="Facebook"></a>
+                <a href="#"><img src="images/ig50.png" alt="Instagram"></a>
+                <a href="#"><img src="images/yt50.png" alt="YouTube"></a>
+            </div>
+            <div class="newsletter">
+                <h3>Join Our Newsletter</h3>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </div>
+        </div>
+    </footer>
+      <script>
+        document.querySelector('.user-icon').addEventListener('click', function(e) {
+          e.preventDefault();
+          const dropdown = document.querySelector('.profile .dropdown');
+          dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+  
+        window.addEventListener('click', function(e) {
+          const dropdown = document.querySelector('.profile .dropdown');
+          if (!e.target.closest('.profile')) {
+            dropdown.style.display = 'none';
+          }
+        });
+        document.getElementById('cta-button').addEventListener('click', function() {
+        window.location.href = 'logintest.html'; // Change this to the actual login page URL
+      });
+      </script>
+</body>
+</html>
